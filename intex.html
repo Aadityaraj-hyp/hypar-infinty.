@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HYPAR OS | MASTER CONSOLE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&amp;family=Inter:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed-variant": "#3f465c",
+              "on-surface-variant": "#c6c6cd",
+              "on-background": "#dce1fb",
+              "secondary-container": "#3a4a5f",
+              "tertiary-fixed-dim": "#ddb7ff",
+              "surface-container-lowest": "#070d1f",
+              "surface-container": "#191f31",
+              "on-primary": "#283044",
+              "surface": "#0c1324",
+              "inverse-surface": "#dce1fb",
+              "primary-fixed": "#dae2fd",
+              "primary-fixed-dim": "#bec6e0",
+              "surface-container-high": "#23293c",
+              "secondary": "#b7c8e1",
+              "primary-container": "#0f172a",
+              "on-primary-container": "#798098",
+              "on-tertiary-fixed-variant": "#6900b3",
+              "tertiary-container": "#270048",
+              "surface-dim": "#0c1324",
+              "surface-bright": "#33394c",
+              "on-secondary-container": "#a9bad3",
+              "surface-tint": "#bec6e0",
+              "outline-variant": "#45464d",
+              "on-tertiary-fixed": "#2c0051",
+              "outline": "#909097",
+              "on-primary-fixed": "#131b2e",
+              "on-tertiary": "#490080",
+              "secondary-fixed-dim": "#b7c8e1",
+              "on-surface": "#dce1fb",
+              "on-error": "#690005",
+              "inverse-primary": "#565e74",
+              "on-error-container": "#ffdad6",
+              "surface-container-highest": "#2e3447",
+              "error-container": "#93000a",
+              "on-secondary-fixed-variant": "#38485d",
+              "background": "#0c1324",
+              "tertiary": "#ddb7ff",
+              "surface-variant": "#2e3447",
+              "surface-container-low": "#151b2d",
+              "secondary-fixed": "#d3e4fe",
+              "inverse-on-surface": "#2a3043",
+              "on-secondary": "#213145",
+              "tertiary-fixed": "#f0dbff",
+              "on-secondary-fixed": "#0b1c30",
+              "primary": "#bec6e0",
+              "error": "#ffb4ab",
+              "on-tertiary-container": "#a956f8"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+      .bg-ai-pulse {
+        background: linear-gradient(135deg, #bec6e0 0%, #0f172a 100%);
+      }
+      .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+      .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+      .custom-scrollbar::-webkit-scrollbar-thumb { background: #23293c; border-radius: 10px; }
+      .mesh-bg {
+        background-image: radial-gradient(circle at 2px 2px, #191f31 1px, transparent 0);
+        background-size: 24px 24px;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-background font-body selection:bg-tertiary/30">
+<!-- SideNavBar (Predicted Rail) -->
+<aside class="fixed left-0 top-0 h-full flex flex-col py-8 bg-[#0c1324] dark:bg-[#0c1324] font-['Manrope'] antialiased tracking-tight h-full w-64 border-r-0 z-50">
+<div class="px-6 mb-12">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded-full bg-ai-pulse flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary">terminal</span>
+</div>
+<div>
+<h1 class="text-xl font-bold tracking-tighter text-[#dce1fb]">HYPAR</h1>
+<p class="text-[10px] uppercase tracking-[0.2em] text-tertiary/60">MASTER CONSOLE</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1 px-4">
+<!-- Strategic Command is Active -->
+<a class="flex items-center gap-4 px-4 py-3 text-[#c6c6cd] opacity-60 hover:bg-[#191f31] transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined">database</span>
+<span class="text-sm">Infinite Memory</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-[#c6c6cd] opacity-60 hover:bg-[#191f31] transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-sm">Deep Reflection</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-[#c6c6cd] opacity-60 hover:bg-[#191f31] transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="text-sm">Verified Truth</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-[#c6c6cd] opacity-60 hover:bg-[#191f31] transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined">bolt</span>
+<span class="text-sm">Action Hub</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-[#bec6e0] font-bold border-r-2 border-[#bec6e0] bg-[#23293c] transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<span class="text-sm">Strategic Command</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-[#c6c6cd] opacity-60 hover:bg-[#191f31] transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="text-sm">Global Treasury</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full py-3 bg-surface-container-high border border-outline-variant/20 rounded text-[10px] font-bold tracking-widest text-primary hover:bg-primary hover:text-surface transition-all">
+                SYSTEM OVERRIDE
+            </button>
+<div class="mt-8 flex items-center gap-3 pt-6 border-t border-outline-variant/10">
+<img alt="Aadityaraj A P - Founder Profile" class="w-8 h-8 rounded-full border border-primary/20" data-alt="Sophisticated digital profile avatar with glowing blue circuitry patterns against a dark background, representing an advanced tech founder profile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfWGUBHg35-vZSjOG9YNP4bTCRI6wYdv87hKWVRY9SNMemCxHfIO0kmLbsHQLo9nuNSOQKUuLhjH58kkKZmR06iGcAFe0XdZXr1uSxUa37Y81syrB3O-nlUtePzx5RoBV09ECrgfddfuF1n0vTHa-1KjYLwxpnKo2vixVQ98sOTv-f-A66gq0LU2k5r8jT6rX_6tKWXq49FVRoXISXRMHZa8mLYg-iPjNI3pi8o1sKoWMxQE5aCZet-P_HmWnf3eHxH1Ixto6d1IU"/>
+<div class="overflow-hidden">
+<p class="text-[10px] font-bold truncate">AADITYARAJ A P</p>
+<p class="text-[8px] text-on-surface-variant truncate">Kannankd378@gmail.com</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 flex justify-between items-center px-8 z-40 bg-[#0c1324]/80 backdrop-blur-xl font-['Manrope'] text-sm uppercase tracking-widest text-[#bec6e0]">
+<div class="flex items-center gap-8">
+<span class="text-lg font-black text-[#dce1fb]">HYPAR OS</span>
+<div class="flex items-center gap-6 text-[10px]">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>INTEGRITY: 99.9%</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span>RELIABILITY: OPTIMAL</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 text-[10px] font-bold text-tertiary">
+<span class="material-symbols-outlined text-sm">security</span>
+                STEALTH CORE ACTIVE
+            </div>
+<div class="h-4 w-px bg-outline-variant/30"></div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-white transition-opacity">monitoring</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-white transition-opacity">account_circle</span>
+<span class="bg-surface-container-high px-3 py-1 rounded text-[10px] font-bold tracking-tighter">AADITYARAJ A P</span>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="ml-64 pt-20 pb-24 px-8 min-h-screen mesh-bg">
+<!-- Header Branding Area -->
+<div class="mb-10 flex justify-between items-end">
+<div>
+<h2 class="text-[10px] font-bold tracking-[0.3em] text-tertiary mb-2 uppercase">System Authorization: Founder Level</h2>
+<h1 class="text-4xl font-extrabold tracking-tighter text-on-background">FOUNDER &amp; CO-FOUNDER: AADITYARAJ A P</h1>
+</div>
+<div class="text-right">
+<p class="text-[10px] text-on-surface-variant mb-1">ACCESS KEY: VERIFIED</p>
+<code class="text-xs bg-surface-container-low px-3 py-1 rounded border border-outline-variant/10 text-primary">Kannankd=Aadityarajap</code>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Central Workspace: Network Topology (Large) -->
+<section class="col-span-12 lg:col-span-8 h-[500px] bg-surface-container-low relative overflow-hidden group">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<img alt="Network Map" class="w-full h-full object-cover grayscale brightness-50" data-alt="Technological world map visualization with complex network nodes, glowing data lines, and digital connectivity patterns in deep blue tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0rrLMoBsA11Gr7YX75uBkGPnQFA6sERl-uzdiWakLRdL9j45upe7suk7arHns5bhL8Y-fqHEP_grzvNof2TaZ1ex7D3QnxhQgB0W7cYwEz4UnolBvxMeGTIK04-UsBTJ68j3SAZ8Yv-nHZwKdlIKVKDIkAevFpPrmVYHDkac8aY2h3hwvxf355Rk8qkC5vH9mKIMFLS-ZnPK_F9Nzdi4GUbW3l9HJrPk3hgDMK6hqNYumKLddblDE2h3qTblOi5g9fqMIL4iOO7o"/>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<!-- Placeholder for interactive topology visualization -->
+<div class="relative w-full h-full flex items-center justify-center p-12">
+<div class="w-full h-full border border-primary/10 rounded-full flex items-center justify-center">
+<div class="w-2/3 h-2/3 border border-primary/20 rounded-full flex items-center justify-center">
+<div class="w-1/3 h-1/3 border border-primary/40 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-primary animate-pulse" style="font-variation-settings: 'FILL' 1;">public</span>
+</div>
+</div>
+</div>
+<!-- Node overlays -->
+<div class="absolute top-1/4 left-1/3 p-2 bg-surface-container-high border border-primary/20 rounded flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="text-[10px] font-bold">NODE: SINGAPORE [ACTIVE]</span>
+</div>
+<div class="absolute bottom-1/3 right-1/4 p-2 bg-surface-container-high border border-primary/20 rounded flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="text-[10px] font-bold">NODE: ZURICH [ACTIVE]</span>
+</div>
+</div>
+</div>
+<div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+<div class="bg-surface-container-highest/80 backdrop-blur-md p-4 rounded-lg max-w-sm">
+<h3 class="text-xs font-bold mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">security</span> DEFENSE MATRIX LOG
+                        </h3>
+<div class="space-y-1 font-mono text-[9px] text-emerald-400/80">
+<p>[14:20:01] INTRUSION ATTEMPT: DENIED</p>
+<p>[14:20:05] ROOT NEUTRALIZATION SUCCESS</p>
+<p>[14:21:12] LOCATION: UNTRACEABLE [ENCRYPTED]</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-[10px] font-bold tracking-widest text-on-surface-variant">GEO-TRAFFIC FLUX</p>
+<p class="text-2xl font-black text-primary">1.4 GB/S</p>
+</div>
+</div>
+</section>
+<!-- Deep Reflection Panel -->
+<section class="col-span-12 lg:col-span-4 h-[500px] bg-surface-container-low p-6 flex flex-col">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-tertiary text-xs font-bold tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">psychology</span> SYSTEM REASONING
+                    </h3>
+<span class="text-[10px] bg-tertiary-container text-on-tertiary-container px-2 py-0.5 rounded uppercase font-bold">O-Series v4</span>
+</div>
+<div class="flex-1 space-y-6 overflow-y-auto custom-scrollbar pr-2">
+<div class="space-y-2">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">Chain of Thought Steps</p>
+<div class="p-3 bg-surface-container-lowest rounded-md space-y-3">
+<div class="flex gap-3">
+<span class="text-tertiary text-xs font-bold">01</span>
+<p class="text-xs text-on-surface/80">Analyzing geopolitical shift in liquidity pools for treasury optimization.</p>
+</div>
+<div class="flex gap-3">
+<span class="text-tertiary text-xs font-bold">02</span>
+<p class="text-xs text-on-surface/80">Verifying quantum-resistant headers for global nodes.</p>
+</div>
+<div class="flex gap-3 border-l-2 border-tertiary/30 pl-3 ml-1.5">
+<span class="text-tertiary text-xs font-bold">03</span>
+<p class="text-xs text-on-surface/80 animate-pulse">Calculating stable equilibrium for adaptive EQ protocol...</p>
+</div>
+</div>
+</div>
+<div class="p-4 bg-ai-pulse/5 border border-primary/10 rounded-lg">
+<div class="flex justify-between items-center mb-3">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary">Adaptive EQ Status</span>
+<span class="text-[10px] font-mono text-emerald-400">STABLE</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-4/5"></div>
+</div>
+<p class="mt-2 text-[10px] text-on-surface-variant italic">Current State: Stable Equilibrium achieved across all emotional modalities.</p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/10">
+<div class="flex items-center justify-between text-[10px] font-bold">
+<span>GESTURE TRACKING</span>
+<span class="text-emerald-400">21-PT ACTIVE</span>
+</div>
+</div>
+</section>
+<!-- Strategic Assets -->
+<section class="col-span-12 grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- BTC Miner -->
+<div class="bg-surface-container p-5 rounded-lg flex flex-col justify-between border-l-2 border-primary/20">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary">currency_bitcoin</span>
+<span class="text-[10px] font-mono text-emerald-400">ONLINE</span>
+</div>
+<div class="mt-4">
+<h4 class="text-[10px] font-bold text-on-surface-variant uppercase">Bitcoin Miner</h4>
+<p class="text-2xl font-black text-on-surface">142.4 <span class="text-xs font-normal opacity-60">TH/s</span></p>
+</div>
+</div>
+<!-- Particle Sim -->
+<div class="bg-surface-container p-5 rounded-lg flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary">blur_on</span>
+<span class="text-[10px] font-mono text-emerald-400">ACTIVE</span>
+</div>
+<div class="mt-4">
+<h4 class="text-[10px] font-bold text-on-surface-variant uppercase">Particle Simulation</h4>
+<p class="text-2xl font-black text-on-surface">9.2M <span class="text-xs font-normal opacity-60">PARTICLES</span></p>
+</div>
+</div>
+<!-- Projection Mapping -->
+<div class="bg-surface-container p-5 rounded-lg flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary">cast</span>
+<span class="text-[10px] font-mono text-emerald-400">SYNC</span>
+</div>
+<div class="mt-4">
+<h4 class="text-[10px] font-bold text-on-surface-variant uppercase">Projection Mapping</h4>
+<p class="text-2xl font-black text-on-surface">60 <span class="text-xs font-normal opacity-60">FPS</span></p>
+</div>
+</div>
+<!-- Multi-Monitor -->
+<div class="bg-surface-container p-5 rounded-lg flex flex-col justify-between border-r-2 border-primary/20">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary">desktop_windows</span>
+<span class="text-[10px] font-mono text-emerald-400">QUAD</span>
+</div>
+<div class="mt-4">
+<h4 class="text-[10px] font-bold text-on-surface-variant uppercase">Multi-Monitor Acceleration</h4>
+<p class="text-2xl font-black text-on-surface">4 <span class="text-xs font-normal opacity-60">DISPLAYS</span></p>
+</div>
+</div>
+</section>
+<!-- Action Hub & Global Treasury -->
+<section class="col-span-12 lg:col-span-7 bg-surface-container-low p-6">
+<h3 class="text-xs font-bold tracking-widest text-on-surface-variant mb-6 uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">bolt</span> Action Hub: Autonomous Execution
+                </h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container rounded border border-outline-variant/10 group cursor-pointer hover:border-primary/40 transition-all">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary">terminal</span>
+<span class="text-[10px] font-bold">GITHUB MASTER PUSH</span>
+</div>
+<p class="text-[9px] text-on-surface-variant">Automated sync of HYPAR core repos.</p>
+<div class="mt-4 flex justify-end">
+<span class="text-[10px] font-bold text-primary px-3 py-1 bg-primary/10 rounded">EXECUTE</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container rounded border border-outline-variant/10 group cursor-pointer hover:border-primary/40 transition-all">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary">cleaning_services</span>
+<span class="text-[10px] font-bold">SYSTEM CLEANUP</span>
+</div>
+<p class="text-[9px] text-on-surface-variant">Purge cache and optimize kernels.</p>
+<div class="mt-4 flex justify-end">
+<span class="text-[10px] font-bold text-primary px-3 py-1 bg-primary/10 rounded">EXECUTE</span>
+</div>
+</div>
+</div>
+<div class="mt-6 p-4 bg-surface-container-lowest rounded-lg border border-emerald-500/10">
+<div class="flex justify-between items-center mb-4">
+<h4 class="text-[10px] font-bold uppercase tracking-widest">Global Treasury Widget</h4>
+<span class="material-symbols-outlined text-emerald-400 text-sm">account_balance</span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<p class="text-[8px] text-on-surface-variant mb-1">UNIFIED ASSET POOL</p>
+<p class="text-3xl font-black text-on-surface">$1.2 <span class="text-sm font-medium">TRILLION</span></p>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded font-bold text-xs hover:scale-105 transition-transform active:scale-95">
+                            AUTHORIZE TRANSFER
+                        </button>
+</div>
+<p class="mt-4 text-[8px] text-on-surface-variant/50 flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px]">lock</span> SECURE AUTHORIZATION REQUIRED VIA NATIONAL BANK PROTOCOLS
+                    </p>
+</div>
+</section>
+<!-- Status Monitoring -->
+<section class="col-span-12 lg:col-span-5 bg-surface-container-low p-6">
+<h3 class="text-xs font-bold tracking-widest text-on-surface-variant mb-6 uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">monitoring</span> Performance Metrics
+                </h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-[10px] mb-2 font-bold">
+<span>NEURAL PROCESSING LOAD</span>
+<span class="text-primary">88%</span>
+</div>
+<div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[88%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[10px] mb-2 font-bold">
+<span>MEMORY ARCHIVE INTEGRITY</span>
+<span class="text-tertiary">99.9%</span>
+</div>
+<div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-[99.9%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[10px] mb-2 font-bold">
+<span>SECURITY UPTIME</span>
+<span class="text-emerald-400">3,402 HOURS</span>
+</div>
+<div class="h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-emerald-400 w-full opacity-30"></div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/10">
+<p class="text-[10px] text-on-surface-variant mb-4 uppercase font-bold tracking-widest">Live Node Feed</p>
+<div class="grid grid-cols-2 gap-2">
+<img class="w-full h-24 object-cover rounded opacity-60 grayscale hover:grayscale-0 transition-all cursor-crosshair" data-alt="Dark computer server room with rows of blinking blue and green LEDs, high-tech cooling systems and data cables." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCALnjPzlSi7bakaW0-XNQYZ7BbHMdQtreSfLIRYbcvtNvDkdYpIrhPxO2c6-xtKKE4LigGUAOgwB54P5PQlxsPcFQsv7Cg0RI7Ynmten__amnvg7WdN6jcwIP1g6-jYvBpiY7rh7ONgTBvMoQSuNahPLBCQOnEzpmBcT64am84p7JS1VpWekhkd8sBQzC-QDtqVHqoVF0bLFKS1xlJpoS9Q5u7Qdl1veVfdCcXUfZD9fouZV-XNoE9bHcJFghCaMoPbxyj4Cm-39c"/>
+<img class="w-full h-24 object-cover rounded opacity-60 grayscale hover:grayscale-0 transition-all cursor-crosshair" data-alt="Satellite view of the Earth at night showing brilliantly glowing cities and interconnected web-like global communications networks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpGWBQ4ehrzcFnU2bCQTZFzEGW31JK965T1Tu1jj2VDyn0F812u0lHQ2_mFYZ4230P2bYbPA9_wglVFxAZc3DSQF3-9nUQyZ_AVkYkeback6O0O44AUkJrIN9L7SP6t09zGbXaqvsbd3ncVZ5dcaTFLrgIDKkjay_hhAYBcCVdc94ubIUer3iLoYjEYwe_gQFfdcQdIq2vDaiK57h0N7ReqgGPyUKYab2k9QcUNaIcjDbJrRJlgbcAmldgzgbT71nAyrDlUbTcoE8"/>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar (Voice Protocol) -->
+<footer class="fixed bottom-0 left-0 right-0 w-full z-50 flex justify-center pb-6">
+<div class="bg-[#151b2d]/90 backdrop-blur-md rounded-t-3xl max-w-2xl mx-auto flex items-center gap-12 px-12 py-4 shadow-[0_-8px_32px_rgba(19,27,46,0.4)] border-t border-primary/10">
+<div class="flex flex-col items-center gap-1 cursor-pointer group">
+<span class="material-symbols-outlined text-[#ddb7ff] animate-pulse">graphic_eq</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-[0.2em] text-[#ddb7ff]">SOUNDWAVE</span>
+</div>
+<div class="flex flex-col items-center gap-1 cursor-pointer hover:bg-[#23293c] px-4 py-2 rounded-xl transition-all group">
+<span class="material-symbols-outlined text-[#c6c6cd] group-hover:text-primary transition-colors">front_hand</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-[0.2em] text-[#c6c6cd] group-hover:text-primary transition-colors">GESTURE: ACTIVE</span>
+</div>
+<div class="flex flex-col items-center gap-1 cursor-pointer hover:bg-[#23293c] px-4 py-2 rounded-xl transition-all group">
+<span class="material-symbols-outlined text-[#c6c6cd] group-hover:text-primary transition-colors">lock</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-[0.2em] text-[#c6c6cd] group-hover:text-primary transition-colors">ENCRYPTION</span>
+</div>
+</div>
+</footer>
+</body></html>
